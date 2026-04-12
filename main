@@ -38,6 +38,13 @@ int count = 0;
     }
 
 //2. Display all students and grades(method)
+//isaac
+    public static void printArrays(double[] grades, String[] names, int count) {
+        for (int i=0;i<count;i++) {    //loops through arrays and stops at the amount of elements added
+            System.out.println("Name: " + names[i] + "\nGrade: " + grades[i]);   //prints the name and subsequent grade at each position
+            System.out.println();   //space for cleaner formatting 
+        }  
+    }
 
 //3. Find a student's grade(method)
 
