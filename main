@@ -16,6 +16,10 @@ Scanner input = new Scanner(System.in);
 //declare and initialize the two one-dimensional arrays
 String[] names = new String[50];
 double[] grades = new double[50];
+
+//declare and initialize count variable for amount of elements in each array
+int count = 0;
+
 //create menu method
 
 //menu options
