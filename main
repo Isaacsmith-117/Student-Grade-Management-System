@@ -10,6 +10,8 @@
 
 //define the main method
 
+//created the scanner object input
+Scanner input = new Scanner(System.in);
 
 //declare and initialize the two one-dimensional arrays
 String[] names = new String[50];
