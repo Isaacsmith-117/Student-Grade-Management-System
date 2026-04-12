@@ -24,6 +24,18 @@ int count = 0;
 
 //menu options
 //1. Add Student and grade(method)
+    public static void updateArrays(double[] grades, String[] names, int count, Scanner input) {
+
+    //ask user for name and grade input
+    //store input into name and grade arrays
+        System.out.println("Enter student name: ");
+        names[count] = input.nextLine();
+        System.out.println("Enter student grade: ");
+        grades[count] = input.nextDouble();
+
+        input.nextLine();  //consume leftover newline so nextLine() works properly
+    
+    }
 
 //2. Display all students and grades(method)
 
