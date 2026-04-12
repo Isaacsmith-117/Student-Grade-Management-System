@@ -8,6 +8,12 @@
 // henry
 //isaac
 
+//define the main method
+
+
+//declare and initialize the two one-dimensional arrays
+String[] names = new String[50];
+double[] grades = new double[50];
 //create menu method
 
 //menu options
