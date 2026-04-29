@@ -1,6 +1,6 @@
-import javax.naming.Name;
+
 import java.util.Scanner;
-public class Main {
+public class GradeSystem {
     public static void clearScreen() {
         System.out.print("\033[2J"); // clear screen
         System.out.print("\033[H");  // move cursor về (1,1)
