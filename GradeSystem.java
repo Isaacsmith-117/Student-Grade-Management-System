@@ -1,12 +1,13 @@
-
 import java.util.Scanner;
-public class GradeSystem {
+
+public class Main {
     public static void clearScreen() {
         System.out.print("\033[2J"); // clear screen
-        System.out.print("\033[H");  // move cursor về (1,1)
+        System.out.print("\033[H");  // move to (1,1)
         System.out.flush();
     }
 
+    //isaac
     //1. Add Student and grade(method)
     public static void updateArrays(double[] grades, String[] names, int count, Scanner input) {
 
@@ -110,6 +111,7 @@ public class GradeSystem {
     }
 
     //kani
+//kani
     public static void findStudentGrade(Scanner input, String[] names, double[] grades, int count){
 
         boolean found = false; // Keeps track if student is found
@@ -169,18 +171,22 @@ public class GradeSystem {
                 case 2:
                     clearScreen();
                     printArrays(Grades, Names, index);
+                    sc.nextLine();
                     break;
                 case 3:
                     clearScreen();
                     System.out.println("Average grade: " + AverageCalculate(Names, Grades));
+                    sc.nextLine();
                     break;
                 case 4:
                     clearScreen();
                     findStudentGrade(sc, Names, Grades, index);
+                    sc.nextLine();
                     break;
                 case 5:
                     clearScreen();
                     findHighestAndLowest(Names, Grades, index);
+                    sc.nextLine();
                     break;
                 case 6:
                     return;
