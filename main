@@ -80,5 +80,30 @@ public static void findStudentGrade(Scanner input, String[] names, int[] grades,
 //4. Calculate class average(method)
 
 //5. Find highest and lowest grades.(method)
+public static void findHighestAndLowest(String[] names, int[] grades, int count) {
+    if (count == 0) {
+        System.out.println("No student data available.");
+        return;
+    }
+
+    int max = grades[0];
+    int min = grades[0];
+    int maxIndex = 0;
+    int minIndex = 0;
+
+    for (int i = 1; i < count; i++) {
+        if (grades[i] > max) {
+            max = grades[i];
+            maxIndex = i;
+        }
+        if (grades[i] < min) {
+            min = grades[i];
+            minIndex = i;
+        }
+    }
+
+    System.out.println("Highest Grade: " + names[maxIndex] + " - " + max);
+    System.out.println("Lowest Grade: " + names[minIndex] + " - " + min);
+}
 
 //6. Exit the program
