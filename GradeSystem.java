@@ -111,7 +111,6 @@ public class GradeSystem {
     }
 
     //kani
-//kani
     public static void findStudentGrade(Scanner input, String[] names, double[] grades, int count){
 
         boolean found = false; // Keeps track if student is found
