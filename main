@@ -79,7 +79,6 @@ int count = 0;
 
 //3. Find a student's grade(method)
 //kani
-//kani
 public static void findStudentGrade(Scanner input, String[] names, int[] grades, int count){
 
   boolean found = false; // Keeps track if student is found 
