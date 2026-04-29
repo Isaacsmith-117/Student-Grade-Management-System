@@ -26,17 +26,48 @@ int count = 0;
 //1. Add Student and grade(method)
     public static void updateArrays(double[] grades, String[] names, int count, Scanner input) {
 
-    //ask user for name and grade input
-    //store input into name and grade arrays
-        System.out.println("Enter student name: ");
-        names[count] = input.nextLine();
-        System.out.println("Enter student grade: ");
-        grades[count] = input.nextDouble();
+        // Make sure there is room in the arrays
+        if (count >= names.length || count >= grades.length) {
+            System.out.println("The student list is full. Cannot add another student.");
+            return;
+    }
+        // declare and initialize empty string       
+        String studentName = "";
+        //ask for name input and validate it
+        while (studentName.isEmpty()) {
+            System.out.println("Enter student name: ");
+            studentName = input.nextLine().trim();
+            if (studentName.isEmpty()) {
+                System.out.println("Name cannot be empty.");
+            }
+       
+        }
+        
+        //validate grade input
+        double studentGrade = -1;
 
-        input.nextLine();  //consume leftover newline so nextLine() works properly
-    
+        while (studentGrade < 0 || studentGrade > 100) { 
+            System.out.println("Enter student grade: ");
+
+            if (input.hasNextDouble()) {    //checks if the input is a double
+                studentGrade = input.nextDouble();
+            
+            if (studentGrade < 0 || studentGrade > 100) {     //checks if double is between 0 and 100
+                System.out.println("Grade must be between 0 and 100.");  
+            }
+
+        } else {
+            System.out.println("Invalid input. Please enter a number.");  //handles any other bad input
+            input.nextLine(); // clear the bad input
+        }
     }
 
+    input.nextLine();  //consume leftover newline so nextLine() works properly
+    //store input into name and grade arrays
+
+    names[count] = studentName;
+    grades[count] = studentGrade;
+    }
 //2. Display all students and grades(method)
 //isaac
     public static void printArrays(double[] grades, String[] names, int count) {
