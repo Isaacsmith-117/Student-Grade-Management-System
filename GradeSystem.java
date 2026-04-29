@@ -7,21 +7,6 @@ public class GradeSystem {
         System.out.flush();
     }
 
-    //isaac
-    //method for option #1 in the menu: add student name and grade
-//    public static void updateArrays(double[] grades, String[] names, int count, Scanner input) {
-//
-//        //ask user for name and grade input
-//        //store input into name and grade arrays
-//        System.out.print("Enter student name: ");
-//        names[count] = input.nextLine();
-//        System.out.print("Enter student grade: ");
-//        grades[count] = input.nextDouble();
-//
-//        input.nextLine();  //consume leftover newline so nextLine() works properly
-//
-//    }
-
     //1. Add Student and grade(method)
     public static void updateArrays(double[] grades, String[] names, int count, Scanner input) {
 
