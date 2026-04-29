@@ -5,12 +5,22 @@
 // args grades array storing student grades (matched by index with names)
 // args count number of students currently stored in the arrays
 public static void findStudentGrade(Scanner input, String[] names, int[] grades, int count){
+  
   // Ask user for the student name they want to find
   System.out.print("Enter student name: "); 
   String name = input.nextLine(); 
 
   // flag to track if the student is found
   boolean found = false; 
+
+  // Keep looping until a valid student is found 
+  while(!found){
+    System.out.print("Enter student name: ");
+    name = input.nextLine();
+  }
+
+  // Search for student
+  found = false; 
 
   // loop through all stored students 
   for(int i = 0; i < count; i++){
@@ -25,6 +35,6 @@ public static void findStudentGrade(Scanner input, String[] names, int[] grades,
   }
   // If no match was found, display message
   if(!found){
-    System.out.println("Student not found.");
+    System.out.println("Student not found. Try again");
   } 
 }
