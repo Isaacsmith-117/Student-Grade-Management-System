@@ -79,14 +79,14 @@ int count = 0;
 
 //3. Find a student's grade(method)
 //kani
-public static void findStudentGrade(Scanner input, String[] names, int[] grades, int count){
+public static void findStudentGrade(Scanner input, String[] names, double[] grades, int count){
 
   boolean found = false; // Keeps track if student is found 
 
   // Keep looping until a valid student is found 
   while(!found){
     System.out.print("Enter student name: ");
-    name = input.nextLine(); // get user input
+    String name = input.nextLine(); // get user input
 
     for(int i = 0; i < count; i++){  // Loop through all students
       if(names[i].equals(name)){  // check if names match
