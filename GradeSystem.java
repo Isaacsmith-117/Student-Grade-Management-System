@@ -135,7 +135,7 @@ public class GradeSystem {
     public static void ShowMenu() {
         clearScreen();
         System.out.println("1. Add student and grade.");
-        System.out.println("2. Display all studen and grade.");
+        System.out.println("2. Display all student and grade.");
         System.out.println("3. Calculate class average.");
         System.out.println("4. Find a student.");
         System.out.println("5. Find the highest and lowest grade.");
