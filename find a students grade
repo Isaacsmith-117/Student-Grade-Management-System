@@ -20,7 +20,7 @@ public static void findStudentGrade(Scanner input, String[] names, int[] grades,
         break; 
       }
     }
-      if(!found){    // If no match was found, ask again
+      if(!found){ // If no match was found, ask again
         System.out.println("Student not found. Try again");
       }
   }
