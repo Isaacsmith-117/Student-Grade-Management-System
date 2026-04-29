@@ -1,9 +1,4 @@
 //kani
-
-// args Scanner input used to read user input
-// args names array storing student names
-// args grades array storing student grades (matched by index with names)
-// args count number of students currently stored in the arrays
 public static void findStudentGrade(Scanner input, String[] names, int[] grades, int count){
 
   boolean found = false; // Keeps track if student is found 
