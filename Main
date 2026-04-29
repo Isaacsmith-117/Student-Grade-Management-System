@@ -125,37 +125,28 @@ public class Main {
     }
 
     //kani
-
-    // args Scanner input used to read user input
-// args names array storing student names
-// args grades array storing student grades (matched by index with names)
-// args count number of students currently stored in the arrays
+//kani
     public static void findStudentGrade(Scanner input, String[] names, double[] grades, int count){
-        // Ask user for the student name they want to find
-        System.out.print("Enter student name: ");
-        String name = input.nextLine();
 
-        // flag to track if the student is found
-        boolean found = false;
+        boolean found = false; // Keeps track if student is found
 
-        // loop through all stored students
-        for(int i = 0; i < count; i++){
-            // Check if current name matches the input name
-            if(names[i].equals(name)){
-                System.out.println(names[i] + "'s " + " Grade: " + grades[i]);
-                // Mark as found
-                found = true;
-                // Stop searching once found
-                break;
+        // Keep looping until a valid student is found
+        while(!found){
+            System.out.print("Enter student name: ");
+            String name = input.nextLine(); // get user input
+
+            for(int i = 0; i < count; i++){  // Loop through all students
+                if(names[i].equals(name)){  // check if names match
+                    System.out.print(names[i] + "'s " + " Grade: " + grades[i]);  // print student grade
+                    found = true; // student found, stop loop
+                    break;
+                }
+            }
+            if(!found){ // If no match was found, ask again
+                System.out.println("Student not found. Try again");
             }
         }
-        // If no match was found, display message
-        if(!found){
-            System.out.println("Student not found.");
-        }
     }
-
-
 
     public static void ShowMenu() {
         clearScreen();
